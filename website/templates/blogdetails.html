@@ -1,3 +1,7 @@
+{% load static %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +15,10 @@
   <title>Dento - Dentist &amp; Medical HTML Template</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="./img/core-img/favicon.ico">
+  <link rel="icon" href="{% static 'website/img/core-img/favicon.ico' %}">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
 
 </head>
 
@@ -62,7 +66,7 @@
           <nav class="classy-navbar justify-content-between" id="dentoNav">
 
             <!-- Logo -->
-            <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+            <a class="nav-brand" href="{% url 'index' %}"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
 
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
@@ -80,16 +84,16 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul id="nav">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="{% url 'index' %}">Home</a></li>
                   <li><a href="#">Pages</a>
                     <ul class="dropdown">
-                      <li><a href="index.html">- Home</a></li>
-                      <li><a href="about.html">- About Us</a></li>
+                      <li><a href="{% url 'index' %}">- Home</a></li>
+                      <li><a href="{% url 'about' %}">- About Us</a></li>
                       <li><a href="service.html">- Service</a></li>
                       <li><a href="pricing.html">- Pricing</a></li>
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
-                      <li><a href="contact.html">- Contact</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blogdetails' %}">- Blog Details</a></li>
+                      <li><a href="{% url 'contact' %}">- Contact</a></li>
                       <li><a href="#">- Dropdown</a>
                         <ul class="dropdown">
                           <li><a href="#">- Dropdown Item</a></li>
@@ -107,16 +111,16 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a href="{% url 'about' %}">About</a></li>
                   <li><a href="service.html">Service</a></li>
                   <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="#">Blog</a>
+                  <li><a href="{% url 'blog' %}">Blog</a>
                     <ul class="dropdown">
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blogdetails' %}">- Blog Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -147,7 +151,7 @@
         <div class="col-12">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="fa fa-home"></i> Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
             </ol>
           </nav>
@@ -164,7 +168,7 @@
         <div class="col-12 col-lg-8 mb-100">
           <!-- Blog Details Area -->
           <div class="blog-details-area">
-            <img src="./img/bg-img/24.jpg" alt="">
+            <img src="{% static 'website/img/bg-img/24.jpg' %}" alt="">
 
             <h2 class="post-title">How your mouth bacteria can harm lungs</h2>
             <div class="post-meta">
@@ -190,7 +194,7 @@
               finibus dictum augue ullamcorper. Integer nuamcorper lorem sit down amet dignissim tincidunt.
               Utsu risus feugiat, scelerisque turpis eu, suscipit orci. Fusce indo diam ipsum. Nulla facilisi class aptent taciti
               litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            <img src="./img/bg-img/25.jpg" alt="">
+            <img src="{% static 'website/img/bg-img/25.jpg' %}" alt="">
             <p>Nunc vitae nisl porttitor, consectetur sapien vel, vulputate orci. Sed viverra, neque action lacinia hendrerit, lectus purus pellentesque dui, eu porttitor enim neque vitae magna. Nunc nec eros nonta risus vestibulum feugiat. In
               semper tempor sem, eget porttitor dolor convallis sit amet. Praesent ut justo augue. Curabitur id elit nisi. Vivamus varius lacus sit amet nisi lacinia, sed pulvinar odio rhoncus. In sagittis aliquet tellus. Nulla pellentesque, risus
               vitae porta iaculis, metus tortor cursus felis, at porta odio lorem nonsa mauris. Nullam mattis nulla blandit sapien cursus, quis luctus ex volutpat. Vestibulum santa dui nulla, sed feugiat felis hendrerit euro. Praesent in lobortis
@@ -216,7 +220,7 @@
                 <div class="comment-content d-flex">
                   <!-- Comment Author -->
                   <div class="comment-author">
-                    <img src="img/bg-img/26.jpg" alt="author">
+                    <img src="{% static 'website/img/bg-img/26.jpg' %}" alt="author">
                   </div>
                   <!-- Comment Meta -->
                   <div class="comment-meta">
@@ -231,7 +235,7 @@
                     <div class="comment-content d-flex">
                       <!-- Comment Author -->
                       <div class="comment-author">
-                        <img src="img/bg-img/27.jpg" alt="author">
+                        <img src="{% static 'website/img/bg-img/27.jpg' %}" alt="author">
                       </div>
                       <!-- Comment Meta -->
                       <div class="comment-meta">
@@ -250,7 +254,7 @@
                 <div class="comment-content d-flex">
                   <!-- Comment Author -->
                   <div class="comment-author">
-                    <img src="img/bg-img/28.jpg" alt="author">
+                    <img src="{% static 'website/img/bg-img/28.jpg' %}" alt="author">
                   </div>
                   <!-- Comment Meta -->
                   <div class="comment-meta">
@@ -321,7 +325,7 @@
               <!-- Single News Area -->
               <div class="single-news-area d-flex align-items-center">
                 <div class="blog-thumbnail">
-                  <img src="./img/bg-img/21.jpg" alt="">
+                  <img src="{% static 'website/img/bg-img/21.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
                   <a href="#" class="post-title">Tooth decay: why good dental hygiene is important</a>
@@ -332,7 +336,7 @@
               <!-- Single News Area -->
               <div class="single-news-area d-flex align-items-center">
                 <div class="blog-thumbnail">
-                  <img src="./img/bg-img/22.jpg" alt="">
+                  <img src="{% static 'website/img/bg-img/22.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
                   <a href="#" class="post-title">Six reasons your breath might smell like poop</a>
@@ -343,7 +347,7 @@
               <!-- Single News Area -->
               <div class="single-news-area d-flex align-items-center">
                 <div class="blog-thumbnail">
-                  <img src="./img/bg-img/23.jpg" alt="">
+                  <img src="{% static 'website/img/bg-img/23.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
                   <a href="#" class="post-title">Everything you need to know about sinus infection</a>
@@ -354,7 +358,7 @@
 
             <!-- Single Widget Area -->
             <div class="single-widget-area adds-widget">
-              <a href="#"><img class="w-100" src="./img/bg-img/adds.png" alt=""></a>
+              <a href="#"><img class="w-100" src="{% static 'website/img/bg-img/adds.png' %}" alt=""></a>
             </div>
 
           </div>
@@ -371,7 +375,7 @@
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="./index.html" class="d-block mb-4"><img src="./img/core-img/logo.png" alt=""></a>
+            <a href="{% url 'index' %}" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
             <div class="footer-contact">
               <p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
@@ -407,9 +411,9 @@
             <!-- Quick Links Nav -->
             <nav>
               <ul class="quick-links">
-                <li><a href="#">About</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="#">Policy</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Advisors</a></li>
@@ -466,16 +470,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- ***** Footer Area End ***** -->
 
   <!-- ******* All JS ******* -->
-  <!-- jQuery js -->
-  <script src="js/jquery.min.js"></script>
+  <!-- jQuery js -->{% static 'website/'%}
+  <script src="{% static 'website/js/jquery.min.js'%}"></script>
   <!-- Popper js -->
-  <script src="js/popper.min.js"></script>
+  <script src="{% static 'website/js/popper.min.js'%}"></script>
   <!-- Bootstrap js -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="{% static 'website/js/bootstrap.min.js'%}"></script>
   <!-- All js -->
-  <script src="js/dento.bundle.js"></script>
+  <script src="{% static 'website/js/dento.bundle.js'%}"></script>
   <!-- Active js -->
-  <script src="js/default-assets/active.js"></script>
+  <script src="{% static 'website/js/default-assets/active.js'%}"></script>
 
 </body>
 

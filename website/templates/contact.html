@@ -97,12 +97,12 @@
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="{% url 'index' %}">- Home</a></li>
-                                            <li><a href="about.html">- About Us</a></li>
+                                            <li><a href="{% url 'about' %}">- About Us</a></li>
                                             <li><a href="service.html">- Service</a></li>
                                             <li><a href="pricing.html">- Pricing</a></li>
-                                            <li><a href="blog.html">- Blog</a></li>
-                                            <li><a href="blogdetails.html">- Blog Details</a></li>
-                                            <li><a href="contact.html">- Contact</a></li>
+                                            <li><a href="{% url 'blog' %}">- Blog</a></li>
+                                            <li><a href="{% url 'blogdetails' %}">- Blog Details</a></li>
+                                            <li><a href="{% url 'contact' %}">- Contact</a></li>
                                             <li><a href="#">- Dropdown</a>
                                                 <ul class="dropdown">
                                                     <li><a href="#">- Dropdown Item</a></li>
@@ -120,16 +120,16 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
                                     <li><a href="service.html">Service</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                     <li><a href="#">Blog</a>
                                         <ul class="dropdown">
-                                            <li><a href="blog.html">- Blog</a></li>
-                                            <li><a href="blogdetails.html">- Blog Details</a></li>
+                                            <li><a href="{% url 'blog' %}">- Blog</a></li>
+                                            <li><a href="{% url 'blogdetails' %}">- Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="./contact.html">Contact</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -252,7 +252,7 @@
                 <!-- Single Footer Widget -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-footer-widget">
-                        <a href="./contact.html" class="d-block mb-4"><img
+                        <a href="{% url 'contact' %}" class="d-block mb-4"><img
                                 src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
                         <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa
                             interdum dignissim.</p>
@@ -290,9 +290,9 @@
                         <!-- Quick Links Nav -->
                         <nav>
                             <ul class="quick-links">
-                                <li><a href="#">About</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
                                 <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
                                 <li><a href="#">Policy</a></li>
                                 <li><a href="#">News</a></li>
                                 <li><a href="#">Advisors</a></li>

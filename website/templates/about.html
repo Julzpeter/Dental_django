@@ -90,9 +90,9 @@
                       <li><a href="{% url 'about' %}">- About Us</a></li>
                       <li><a href="service.html">- Service</a></li>
                       <li><a href="pricing.html">- Pricing</a></li>
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blogdetails.html">- Blog Details</a></li>
-                      <li><a href="contact.html">- Contact</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blogdetail' %}">- Blog Details</a></li>
+                      <li><a href="{% url 'contact' %}">- Contact</a></li>
                       <li><a href="#">- Dropdown</a>
                         <ul class="dropdown">
                           <li><a href="#">- Dropdown Item</a></li>
@@ -113,10 +113,10 @@
                   <li><a href="{% url 'about' %}">About</a></li>
                   <li><a href="service.html">Service</a></li>
                   <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="#">Blog</a>
+                  <li><a href="{% url 'blog' %}">Blog</a>
                     <ul class="dropdown">
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blogdetails.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blogdetail' %}">- Blog Details</a></li>
                     </ul>
                   </li>
                   <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -444,9 +444,9 @@
             <!-- Quick Links Nav -->
             <nav>
               <ul class="quick-links">
-                <li><a href="#">About</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="#">Policy</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Advisors</a></li>

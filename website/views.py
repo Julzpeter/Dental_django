@@ -27,7 +27,8 @@ def contact(request):
         #return page
         return render(request, 'contact.html', {})
 
-    
+def about (request):
+    return render(request, 'about.html',{}) 
     
 
         
